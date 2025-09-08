@@ -1,22 +1,17 @@
 <?php
-$tittle = "My Blog";
-$numPosts = '2';
-$hasPosts = "$numPosts + 0";
-$numPostDisplay = "\"$numPosts\" posts";
+$title = 'My Blog';
+$numPosts = 10;
+$hasPosts = $numPosts > 0;
+$numPostsDisplay = "\"$numPosts\" posts";
 ?>
-
-<h1><?= $tittle ?> </h1>
-<h2> <?= $numPostDisplay ?> </h2>
-
-<?php
-if ($numPosts) {
-    echo "There are exactly $hasPosts";
-} elseif ($numPosts === 3) {
-    echo 'Posts exist';
-} elseif ($numPosts === 2) {
-    echo 'There 2 posts';
-} else {
-    echo "There are no posts";
-}
-
-?>
+    <h1><?= $title ?></h1>
+    <h2><?= $numPostsDisplay ?></h2>
+<?php if ($hasPosts): ?>
+    <?php if ($numPosts === 3): ?>
+        There are exactly 3 posts.
+    <?php else: ?>
+        Posts exist.
+    <?php endif ?>
+<?php else: ?>
+    There are no posts.
+<?php endif ?>
