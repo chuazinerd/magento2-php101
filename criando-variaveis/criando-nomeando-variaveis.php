@@ -1,6 +1,6 @@
 <?php
-$tittle = "Create an variable";
-$numPost = 10;
+$tittle = (int) "Create an variable";
+$numPost = (string) 10;
 ?>
 
 <h1><?= $tittle; ?></h1>
