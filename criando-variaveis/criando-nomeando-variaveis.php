@@ -3,6 +3,7 @@ $tittle = "Create an variable";
 $numPost = 10;
 $numPostDisplay = "\"$numPost\" posts";
 define('NEW_VALUE', 7);
+$hasPost = $numPost < 0;
 const NEW_VALUR = 21;
 ?>
 
@@ -14,3 +15,4 @@ const NEW_VALUR = 21;
 <h3>Novo valor: <?= NEW_VALUR ?> </h3>
 
 
+<?= var_dump($hasPost); ?>
