@@ -1,7 +1,7 @@
 <?php
 $tittle = "Create an variable";
 $numPost = 10;
-$numPostDisplay = $numPost . ' posts';
+$numPostDisplay = "\"$numPost\" posts";
 
 ?>
 
