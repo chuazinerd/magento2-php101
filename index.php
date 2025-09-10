@@ -1,11 +1,12 @@
 <?php declare(strict_types=1);
 
-require('function.php');
+require('classes/Post.php');
 
 $title = 'My Blog';
-$posts = getPosts();
+//posts will receive what come from Post::getAll()
+$posts = Post::getAll();
 $numPosts = count($posts);
-$postText = getPostText($numPosts);
+$postText = Post::getText($numPosts);
 $numPostsDisplay = "$numPosts $postText";
 ?>
 <h1><?= $title ?></h1>
@@ -13,4 +14,6 @@ $numPostsDisplay = "$numPosts $postText";
 <?php for ($i = 0; $i < $numPosts; $i++): ?>
     <h3><?= $posts[$i]['title'] ?></h3>
     <p><?= $posts[$i]['content'] ?></p>
+    <p><?= $posts[$i]['man'] ?></p>
 <?php endfor ?>
+
